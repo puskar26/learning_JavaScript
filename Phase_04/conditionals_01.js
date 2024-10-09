@@ -31,3 +31,13 @@ switch (a) {
   default:
     console.log("Invalid");
 }
+
+//Nullish coalescing operator
+let num;
+num = undefined ?? 10;
+console.log(num);
+
+//Ternary Operator
+// condition ? result1 : result 2
+let b = 3;
+a < b ? console.log("A is less") : console.log("B is less");
