@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Code</title>
+  </head>
+  <body>
+    <div class="name">Hello</div>
+    <button class="start-button">Start</button>
+    <button class="stop-button">Stop</button>
+  </body>
+  <script>
+    // function greet() {
+    //   console.log("Hello");
+    // }
+    // function say() {
+    //   console.log("Pushkar");
+    // }
+    // //greet();
+    // setTimeout(greet, 2000);
+    // //setInterval(greet, 4000);
+    // say();
+    // setInterval(() => {
+    //   document.querySelector("title").innerText = `(5) Async Code`;
+    // }, 2000);
+    const nameChange = document.querySelector(".name");
+    const start = document.querySelector(".start-button");
+    const stop = document.querySelector(".stop-button");
+    start.addEventListener("click", () => {
+      const getT = setTimeout(() => {
+        if (nameChange.innerText === "Pushkar") {
+          nameChange.innerText = "Hello";
+        } else {
+          nameChange.innerText = "Pushkar";
+        }
+      }, 2000);
+    });
+    stop.addEventListener("click", () => {
+      clearTimeout(getT);
+    });
+  </script>
+</html>

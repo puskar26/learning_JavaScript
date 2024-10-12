@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <h1 id="title">Hello</h1>
+    <a
+      class="link"
+      href="https://www.google.com"
+      style="text-decoration: none; color: black"
+      target="_blank"
+      >Google</a
+    >
+  </body>
+  <script>
+    document.getElementById("title").addEventListener("click", (e) => {
+      console.log(e);
+      console.log(e.type); // Tells which type of event i.e. click, load etc.
+      console.log(e.timeStamp); //Time after which the event was triggered
+      console.log(e.preventDefault()); //Prevent default actions like form submit
+      console.log(e.currentTarget); //What is the target for event
+      console.log(e.srcElement); //Where is the event generated from
+      console.log(e.screenX);
+      console.log(e.screenY);
+      console.log(e.clientX);
+      console.log(e.clientY);
+    });
+    document.querySelector(".link").addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Default action prevented");
+    });
+  </script>
+</html>
